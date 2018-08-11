@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import static com.example.juzer.dashboard.R.color.cardPressed;
+
+public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
 
     CardView cardStart,cardExit,cardAbout,cardSettings;
 
@@ -22,36 +25,64 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cardExit=(CardView) findViewById(R.id.cardExit);
         cardSettings=(CardView)findViewById(R.id.cardSettings);
 
-        cardStart.setOnClickListener(MainActivity.this);
-        cardSettings.setOnClickListener(MainActivity.this);
-        cardExit.setOnClickListener(MainActivity.this);
-        cardAbout.setOnClickListener(MainActivity.this);
 
+
+        cardStart.setOnTouchListener(MainActivity.this);
+        cardAbout.setOnTouchListener(MainActivity.this);
+        cardExit.setOnTouchListener(MainActivity.this);
+        cardSettings.setOnTouchListener(MainActivity.this);
 
     }
 
     @Override
-    public void onClick(View view) {
+    public boolean onTouch(View view, MotionEvent motionEvent) {
 
-        switch (view.getId()){
+        switch(view.getId()){
+
             case R.id.cardStart:
-                Intent i;
-                i=new Intent(MainActivity.this,Start.class);
-                startActivity(i);
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    cardStart.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
+                    Intent i;
+                    i=new Intent(MainActivity.this,Start.class);
+                    startActivity(i);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    cardStart.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                }
                 break;
+
             case R.id.cardAbout:
-                Intent i2;
-                i2=new Intent(MainActivity.this,About.class);
-                startActivity(i2);
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    cardAbout.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
+                    Intent i;
+                    i=new Intent(MainActivity.this,About.class);
+                    startActivity(i);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    cardAbout.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                }
                 break;
+
             case R.id.cardSettings:
-                Intent i3;
-                i3=new Intent(MainActivity.this,Settings.class);
-                startActivity(i3);
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    cardSettings.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
+                    Intent i;
+                    i=new Intent(MainActivity.this,Settings.class);
+                    startActivity(i);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    cardSettings.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                }
                 break;
+
             case R.id.cardExit:
-                finish();
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
+                    finish();
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                }
                 break;
+
         }
+
+        return true;
     }
 }

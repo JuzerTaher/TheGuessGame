@@ -42,8 +42,8 @@
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
-                        app:cardElevation="5dp"
-                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="7dp"
                         android:id="@+id/cardStart">
 
                         <LinearLayout
@@ -84,8 +84,8 @@
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
-                        app:cardElevation="5dp"
-                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="7dp"
                         android:id="@+id/cardAbout">
 
                         <LinearLayout
@@ -133,8 +133,8 @@
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
-                        app:cardElevation="5dp"
-                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="7dp"
                         android:id="@+id/cardSettings">
 
                         <LinearLayout
@@ -175,8 +175,8 @@
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
-                        app:cardElevation="5dp"
-                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="7dp"
                         android:id="@+id/cardExit">
 
                         <LinearLayout
