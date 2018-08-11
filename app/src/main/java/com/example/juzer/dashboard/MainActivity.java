@@ -1,6 +1,10 @@
 package com.example.juzer.dashboard;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -13,6 +17,7 @@ import static com.example.juzer.dashboard.R.color.cardPressed;
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
 
     CardView cardStart,cardExit,cardAbout,cardSettings;
+    static boolean value=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         cardExit.setOnTouchListener(MainActivity.this);
         cardSettings.setOnTouchListener(MainActivity.this);
 
-    }
+        }
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -75,7 +80,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
             case R.id.cardExit:
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
-                    finish();
+                    new AlertDialog.Builder(this).setTitle("CONFIRM EXIT").setMessage("Are you sure you want to Exit?")
+                            .setNegativeButton("NO",null).setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finish();
+                        }
+                    }).create().show();
                 } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
                     cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
                 }
@@ -84,5 +95,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         }
 
         return true;
+    }
+
+     @Override
+    protected void onPause() {
+        super.onPause();
+        cardStart.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+        cardSettings.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+        cardAbout.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+        cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
     }
 }
