@@ -9,5 +9,5 @@
     <color name="colorGreen">#00bfa5</color>
     <color name="colorAccent">#ff4081</color>
     <color name="cardPressed">#ededed</color>
-    <color name="cardReleased">#fff</color>
+    <color name="white">#fff</color>
 </resources>

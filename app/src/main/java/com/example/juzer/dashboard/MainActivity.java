@@ -45,35 +45,37 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         switch(view.getId()){
 
             case R.id.cardStart:
+
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     cardStart.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
                     Intent i;
-                    i=new Intent(MainActivity.this,Start.class);
+                    i = new Intent(MainActivity.this, Start.class);
                     startActivity(i);
-                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    cardStart.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                }
+                else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    cardStart.setCardBackgroundColor(getResources().getColor(R.color.white));
                 }
                 break;
 
             case R.id.cardAbout:
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     cardAbout.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
-                    Intent i;
-                    i=new Intent(MainActivity.this,About.class);
-                    startActivity(i);
+                    Intent i1;
+                    i1=new Intent(MainActivity.this,About.class);
+                    startActivity(i1);
                 } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    cardAbout.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                    cardAbout.setCardBackgroundColor(getResources().getColor(R.color.white));
                 }
                 break;
 
             case R.id.cardSettings:
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
                     cardSettings.setCardBackgroundColor(getResources().getColor(R.color.cardPressed));
-                    Intent i;
-                    i=new Intent(MainActivity.this,Settings.class);
-                    startActivity(i);
+                    Intent i2;
+                    i2=new Intent(MainActivity.this,Settings.class);
+                    startActivity(i2);
                 } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    cardSettings.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                    cardSettings.setCardBackgroundColor(getResources().getColor(R.color.white));
                 }
                 break;
 
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                         }
                     }).create().show();
                 } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+                    cardExit.setCardBackgroundColor(getResources().getColor(R.color.white));
                 }
                 break;
 
@@ -100,9 +102,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
      @Override
     protected void onPause() {
         super.onPause();
-        cardStart.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
-        cardSettings.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
-        cardAbout.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
-        cardExit.setCardBackgroundColor(getResources().getColor(R.color.cardReleased));
+        cardStart.setCardBackgroundColor(getResources().getColor(R.color.white));
+        cardSettings.setCardBackgroundColor(getResources().getColor(R.color.white));
+        cardAbout.setCardBackgroundColor(getResources().getColor(R.color.white));
+        cardExit.setCardBackgroundColor(getResources().getColor(R.color.white));
     }
 }
