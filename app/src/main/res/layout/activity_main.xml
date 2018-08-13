@@ -43,13 +43,14 @@
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
                         app:cardElevation="6dp"
-                        app:cardCornerRadius="7dp"
+                        app:cardCornerRadius="5dp"
                         android:id="@+id/cardStart">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
+                            android:background="@drawable/card_bcakground"
                             android:gravity="center">
 
                             <ImageView
@@ -85,13 +86,14 @@
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
                         app:cardElevation="6dp"
-                        app:cardCornerRadius="7dp"
+                        app:cardCornerRadius="5dp"
                         android:id="@+id/cardAbout">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
+                            android:background="@drawable/card_bcakground"
                             android:gravity="center">
 
                             <ImageView
@@ -136,14 +138,15 @@
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
                         app:cardElevation="6dp"
-                        app:cardCornerRadius="7dp"
+                        app:cardCornerRadius="5dp"
                         android:id="@+id/cardSettings">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:background="@drawable/card_bcakground">
 
                             <ImageView
                                 android:layout_width="64dp"
@@ -178,14 +181,15 @@
                         android:layout_margin="10dp"
                         android:layout_weight="0.5"
                         app:cardElevation="6dp"
-                        app:cardCornerRadius="7dp"
+                        app:cardCornerRadius="5dp"
                         android:id="@+id/cardExit">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:background="@drawable/card_bcakground">
 
                             <ImageView
                                 android:layout_width="64dp"

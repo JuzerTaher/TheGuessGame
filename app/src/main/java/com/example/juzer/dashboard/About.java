@@ -29,11 +29,13 @@ public class About extends AppCompatActivity implements View.OnClickListener {
                 Intent i;
                 i=new Intent(About.this,Start.class);
                 startActivity(i);
+                finish();
                 break;
             case R.id.btnBack:
                 Intent i2;
                 i2=new Intent(About.this,MainActivity.class);
                 startActivity(i2);
+                finish();
                 break;
 
         }
