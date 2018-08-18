@@ -28,10 +28,14 @@
                     android:layout_marginRight="40dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
-                    android:elevation="10dp"
+                    android:elevation="3dp"
                     android:text="This is where you will find the information for your app. Folow the instructions properly."
                     android:textColor="@color/white"
                     android:textSize="24dp"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="3"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
                     android:textStyle="bold" />
 
                 <android.support.v4.widget.Space
@@ -45,10 +49,14 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
-                    android:elevation="10dp"
+                    android:elevation="3dp"
                     android:text="Welcome to the information page. I am not provided with the right data so i am just typing some random stuff ....."
                     android:textColor="@color/white"
                     android:textSize="24dp"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="3"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
                     android:textStyle="bold" />
 
                 <android.support.v4.widget.Space
@@ -62,10 +70,14 @@
                     android:layout_marginRight="40dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
-                    android:elevation="10dp"
+                    android:elevation="3dp"
                     android:text="This is where you will find the information for your app. Folow the instructions properly."
                     android:textColor="@color/white"
                     android:textSize="24dp"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="3"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
                     android:textStyle="bold" />
 
                 <android.support.v4.widget.Space
@@ -79,11 +91,15 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
-                    android:elevation="10dp"
+                    android:elevation="3dp"
                     android:text="Welcome to the information page. I am not provided with the right data so i am just typing some random stuff ....."
                     android:textColor="@color/white"
                     android:textSize="24dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="3"
+                    android:shadowDx="3"
+                    android:shadowDy="3"/>
 
                 <android.support.v4.widget.Space
                     android:layout_width="match_parent"
@@ -104,6 +120,10 @@
                         android:text="BACK"
                         android:textSize="24dp"
                         android:textStyle="bold"
+                        android:shadowColor="@color/cardview_dark_background"
+                        android:shadowRadius="3"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
                         android:textColor="@color/white"
                         android:background="@drawable/about_text1"/>
 
@@ -115,6 +135,10 @@
                         android:id="@+id/btnProceed"
                         android:elevation="5dp"
                         android:text="PROCEED "
+                        android:shadowColor="@color/cardview_dark_background"
+                        android:shadowRadius="3"
+                        android:shadowDx="3"
+                        android:shadowDy="3"
                         android:textColor="@color/white"
                         android:textSize="24dp"
                         android:background="@drawable/about_text3"
