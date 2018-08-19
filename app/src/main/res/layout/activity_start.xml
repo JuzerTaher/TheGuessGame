@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello, I am Alex. I have guessed a number for you. Let's see how good are you in guessing this number."
+            android:text="Hey Guys. I have a number for you in my mind right now. Let's see how good are you in guessing this number."
             android:textColor="@color/colorAccent"
             android:textSize="24dp"
             android:textStyle="bold"
@@ -44,6 +44,18 @@
             android:textColorHighlight="@color/colorPrimary"
             android:textColorHint="#FFB8B7B6"
             android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txtHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/cardview_dark_background"
+            android:shadowRadius="1"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:text="HINT: I have guessed a number between 1 and 20."
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"/>
 
         <android.support.v4.widget.Space
             android:layout_width="match_parent"
@@ -105,9 +117,9 @@
             android:layout_height="10dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome to the information page. I am not provided with the right data so i am just typing some random stuff ....."
             android:textColor="@color/cardview_dark_background"
             android:textSize="22dp"
             android:textStyle="bold"
