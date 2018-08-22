@@ -32,9 +32,6 @@ public class About extends AppCompatActivity implements View.OnClickListener {
                 finish();
                 break;
             case R.id.btnBack:
-                Intent i2;
-                i2=new Intent(About.this,MainActivity.class);
-                startActivity(i2);
                 finish();
                 break;
 

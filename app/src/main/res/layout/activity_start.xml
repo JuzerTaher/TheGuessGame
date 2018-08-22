@@ -4,130 +4,196 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@color/colorPrimary"
     tools:context=".Start">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <android.support.v4.widget.Space
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hey Guys. I have a number for you in my mind right now. Let's see how good are you in guessing this number."
-            android:textColor="@color/colorAccent"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:shadowColor="@color/cardview_dark_background"
-            android:shadowRadius="1"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@color/colorBackground">
 
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
-        <EditText
-            android:id="@+id/edtGuess"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:textSize="24dp"
-            android:hint="Try guessing my number....."
-            android:inputType="numberSigned"
-            android:textColorHighlight="@color/colorPrimary"
-            android:textColorHint="#FFB8B7B6"
-            android:textStyle="normal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hey Guys. I have a number for you in my mind right now. Let's see how good are you in guessing this number."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    />
 
-        <TextView
-            android:id="@+id/txtHint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="@color/cardview_dark_background"
-            android:shadowRadius="1"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:text="HINT: I have guessed a number between 1 and 20."
-            android:textColor="@color/colorAccent"
-            android:textSize="16dp"/>
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
 
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+                <EditText
+                    android:id="@+id/edtGuess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="24dp"
+                    android:hint="Try guessing my number....."
+                    android:inputType="numberSigned"
+                    android:textColorHighlight="@color/colorPrimary"
+                    android:textColorHint="#FFB8B7B6"
+                    android:textStyle="normal" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:id="@+id/btnCheck"
-            android:elevation="10dp"
-            android:text="CHECK..!"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:background="@drawable/about_text3"/>
+                <TextView
+                    android:id="@+id/txtHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:text=" HINT: I have guessed a number between 1 and 20."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16dp"/>
 
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+                <TextView
+                    android:id="@+id/txtLimitHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:text="           You have 10 attempts to find it out."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16dp"/>
 
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
 
-        <TextView
-            android:id="@+id/txtAttempt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Attempts: 0"
-            android:textColor="@color/colorAccent"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:shadowColor="@color/cardview_dark_background"
-            android:shadowRadius="1"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/btnCheck"
+                    android:elevation="10dp"
+                    android:text="CHECK..!"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/about_text3"/>
 
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="60dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MESSAGE"
-            android:id="@+id/txtMsg"
-            android:gravity="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:shadowColor="@color/cardview_dark_background"
-            android:shadowRadius="1"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            />
-
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <TextView
-            android:id="@+id/txtInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/cardview_dark_background"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:elevation="2dp"
-            android:background="@drawable/message_box"/>
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
 
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtAttempt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Attempts: 0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MESSAGE"
+                    android:id="@+id/txtMsg"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/cardview_dark_background"
+                    android:shadowRadius="1"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:id="@+id/txtInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:elevation="2dp"
+                    android:background="@drawable/message_box"/>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/btnTryAgain"
+                    android:elevation="10dp"
+                    android:text="TRY AGAIN..!"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/about_text2"/>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/btnHome"
+                    android:elevation="10dp"
+                    android:text="EXIT"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/about_text4"/>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
 
 
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
