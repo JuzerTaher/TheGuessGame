@@ -4,11 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".Settings">
-    <TextView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorBackground">
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOOSE DIFFICULTY LEVEL"
+            android:textSize="26dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:elevation="3dp"
+            android:textStyle="bold"
+            android:shadowColor="@color/cardview_dark_background"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:text="Your settings"/>
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:shadowRadius="10"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:background="@color/cardPressed">
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBeginner"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="BEGINNER"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/about_text4"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIntermediate"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="INTERMEDIATE"
+            android:textSize="24dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="bold"
+            android:shadowColor="@color/cardview_dark_background"
+            android:shadowRadius="3"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:textColor="@color/white"
+            android:background="@drawable/about_text1"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdvance"
+            android:layout_gravity="center"
+            android:elevation="10dp"
+            android:text="ADVANCE"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/about_text2"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

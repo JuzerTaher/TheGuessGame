@@ -18,13 +18,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_margin="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
                 android:padding="5dp"
                 android:background="@color/colorBackground">
 
                 <android.support.v4.widget.Space
                     android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="10dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -75,7 +77,6 @@
                     android:shadowRadius="1"
                     android:shadowDx="1"
                     android:shadowDy="1"
-                    android:text="           You have 10 attempts to find it out."
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp"/>
 
@@ -117,7 +118,7 @@
 
                 <android.support.v4.widget.Space
                     android:layout_width="match_parent"
-                    android:layout_height="60dp" />
+                    android:layout_height="30dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -150,7 +151,7 @@
 
                 <android.support.v4.widget.Space
                     android:layout_width="match_parent"
-                    android:layout_height="60dp" />
+                    android:layout_height="30dp" />
 
                 <Button
                     android:layout_width="wrap_content"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="@color/colorPrimary"
     tools:context=".About">
 
     <ScrollView
@@ -13,13 +13,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorBackground"
+                >
 
                 <TextView
                     android:layout_width="match_parent"
@@ -29,7 +34,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
                     android:elevation="3dp"
-                    android:text="This is where you will find the information for your app. Folow the instructions properly."
+                    android:text="Rule 1: You are suppose to guess a number from a given range of numbers."
                     android:textColor="@color/white"
                     android:textSize="24dp"
                     android:shadowColor="@color/cardview_dark_background"
@@ -50,7 +55,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
                     android:elevation="3dp"
-                    android:text="Welcome to the information page. I am not provided with the right data so i am just typing some random stuff ....."
+                    android:text="Rule 2: You will be given a limited number of attempts for a particular guess."
                     android:textColor="@color/white"
                     android:textSize="24dp"
                     android:shadowColor="@color/cardview_dark_background"
@@ -71,7 +76,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
                     android:elevation="3dp"
-                    android:text="This is where you will find the information for your app. Folow the instructions properly."
+                    android:text="Rule 3: If you make a wrong guess, your number of attempts will increase by 1."
                     android:textColor="@color/white"
                     android:textSize="24dp"
                     android:shadowColor="@color/cardview_dark_background"
@@ -92,7 +97,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/button_pressed"
                     android:elevation="3dp"
-                    android:text="Welcome to the information page. I am not provided with the right data so i am just typing some random stuff ....."
+                    android:text="Rule 4: The one who guesses the right number in minimum no. of attempts is the Winner."
                     android:textColor="@color/white"
                     android:textSize="24dp"
                     android:textStyle="bold"
@@ -103,35 +108,13 @@
 
                 <android.support.v4.widget.Space
                     android:layout_width="match_parent"
-                    android:layout_height="30dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="20dp" />
 
                     <Button
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:id="@+id/btnBack"
-                        android:layout_weight="5"
-                        android:elevation="10dp"
-                        android:text="BACK"
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:shadowColor="@color/cardview_dark_background"
-                        android:shadowRadius="3"
-                        android:shadowDx="3"
-                        android:shadowDy="3"
-                        android:textColor="@color/white"
-                        android:background="@drawable/about_text1"/>
-
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_weight="5"
+                        android:layout_gravity="center_horizontal"
                         android:id="@+id/btnProceed"
                         android:elevation="5dp"
                         android:text="PROCEED "
@@ -140,10 +123,14 @@
                         android:shadowDx="3"
                         android:shadowDy="3"
                         android:textColor="@color/white"
-                        android:textSize="24dp"
-                        android:background="@drawable/about_text3"
+                        android:textSize="28dp"
+                        android:background="@drawable/about_text1"
                         android:textStyle="bold" />
-                </LinearLayout>
+
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
             </LinearLayout>
         </LinearLayout>
